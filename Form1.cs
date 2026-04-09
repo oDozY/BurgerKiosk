@@ -6,6 +6,7 @@ namespace BurgerKiosk
         public Form1()
         {
             InitializeComponent();
+            this.ActiveControl = null;
         }
 
         private void grpSelectMenu_Enter(object sender, EventArgs e)
@@ -15,39 +16,39 @@ namespace BurgerKiosk
 
         private void rdoHamburger_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void rdoBulgogiBurger_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void rdoChickenBurger_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
        
 
         private void chkFrenchFries_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void chkCoke_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void chkAddCheese_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void chkAddSouce_CheckedChanged(object sender, EventArgs e)
         {
-            
+            UpdateOrder();
         }
 
         private void grpOrder_Enter(object sender, EventArgs e)
@@ -78,6 +79,7 @@ namespace BurgerKiosk
             lstOrder.Items.Clear();
             lblTotalCost.Text = "총 금액 : 0원";
             totalCost = 0;
+            rdoHamBurger.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
