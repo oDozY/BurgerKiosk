@@ -26,7 +26,7 @@ namespace BurgerKiosk
 
         private void rdoChickenBurger_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateOrder();
+            UpdateOrder(); 
         }
 
        
