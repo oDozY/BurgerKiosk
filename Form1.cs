@@ -15,17 +15,68 @@ namespace BurgerKiosk
 
         private void rdoHamburger_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateOrder();
+            
         }
 
         private void rdoBulgogiBurger_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateOrder();
+            
         }
 
         private void rdoChickenBurger_CheckedChanged(object sender, EventArgs e)
         {
+            
+        }
+
+       
+
+        private void chkFrenchFries_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chkCoke_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chkAddCheese_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void chkAddSouce_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void grpOrder_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
             UpdateOrder();
+        }
+
+        private void btnIni_Click(object sender, EventArgs e)
+        {
+            rdoHamBurger.Checked = false;
+            rdoBulgogiBurger.Checked = false;
+            rdoChickenBurger.Checked = false;
+            chkPotato.Checked = false;
+            chkCola.Checked = false;
+            chkCheese.Checked = false;
+            chkSauce.Checked = false;
+            lstOrder.Items.Clear();
+            lblTotalCost.Text = "";
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void UpdateOrder()
@@ -33,7 +84,7 @@ namespace BurgerKiosk
             totalCost = 0;
             lstOrder.Items.Clear();
 
-            if (rdoHamburger.Checked)
+            if (rdoHamBurger.Checked)
             {
                 totalCost += 5000;
                 lstOrder.Items.Add("햄버거 5,000원");
@@ -71,26 +122,6 @@ namespace BurgerKiosk
             }
 
             lblTotalCost.Text = "총 금액 : " + totalCost.ToString("#,##0") + "원";
-        }
-
-        private void chkFrenchFries_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateOrder();
-        }
-
-        private void chkCoke_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateOrder();
-        }
-
-        private void chkAddCheese_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateOrder();
-        }
-
-        private void chkAddSouce_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateOrder();
         }
     }
 }
