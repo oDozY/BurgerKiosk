@@ -57,6 +57,12 @@ namespace BurgerKiosk
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                lblTotalCost.Text = "메뉴를 선택하세요.";
+                return;
+            }
+
             UpdateOrder();
         }
 
@@ -70,8 +76,8 @@ namespace BurgerKiosk
             chkCheese.Checked = false;
             chkSauce.Checked = false;
             lstOrder.Items.Clear();
-            lblTotalCost.Text = "";
-
+            lblTotalCost.Text = "총 금액 : 0원";
+            totalCost = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
